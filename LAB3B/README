@@ -1,0 +1,10 @@
+Project 3B
+Bowei Wang
+UID: 704448696
+
+Files:
+	lab3b.py   -the parser for detecting errors in provided csv files
+	Makefile   - to run the python script
+	README
+
+To run the program, use command "python lab3b.py" with the 6 csv files in the same directory.

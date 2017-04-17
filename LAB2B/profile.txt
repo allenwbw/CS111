@@ -1,0 +1,11 @@
+Using local file lab2_list.
+Using local file raw.perf.
+Total: 2774 samples
+    2499  90.1%  90.1%     2774 100.0% insert_lookup_delete
+     153   5.5%  95.6%      153   5.5% __strcmp_sse42
+      95   3.4%  99.0%      125   4.5% SortedList_lookup
+      24   0.9%  99.9%      150   5.4% SortedList_insert
+       3   0.1% 100.0%        3   0.1% _init
+       0   0.0% 100.0%     2774 100.0% __clone
+       0   0.0% 100.0%     2774 100.0% start_thread
+

@@ -1,0 +1,31 @@
+name: Bowei Wang
+UID: 704448696
+
+client.c:
+	the source code file for create a noncanonical client terminal without echo. The terminal connects to a server through TCP on local host. The connection is implemented through socket API. The program runs two threads where one thread read from the keyboard and echo the character one at a time to the STDOUT and sent the character into the socket. The other thread read from the socket(server) and echo the input to STDOUT. The program supports three options:
+	--port=portnum  this option is used to specify the port number for conn	     	 	  	   ecting with the server which is a required option.
+	--log=filename  this option is used to log messages sent and received t				   o a file specified by the filename.
+	--encrypt 	this option is used to decrypt received message and enc				   rypt sent message. Note that this option should onl                        y be used when the encryption is turned on on the serve                       r side
+
+server.c
+	this is the source code file for the server program. This program sets up a server which the client will connect to. It sets up the connection with the socket API. The server runs on localhost address. The server forks a child process to execute a bash shell. The parent process creates a thread to read from the shell and sent to the socket. The main thread in the parent process read from the socket and send the message to the shell. The program supports two options:
+	--port=portnum    this option is used to specify the port number which is used by the client to establish a connection with the server.
+	--encrypt 	  this option is used to decrypt received message and e	       	      	     	ncrypt sent message.
+
+
+
+my.key:
+	This file contains a random passphrase used in the encryption algorithm.
+
+
+Makefile:
+	This file contains three five targets:
+
+	default: compile the server and client program
+	server: compiles the server program
+	client: compiles the client program
+	clean: deletes generated executables
+	dist: create a tarball containing the source code files, Makefile, my.k		     ey and README.
+
+README:
+	Describe the function of each of the files in the tarball.

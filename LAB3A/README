@@ -1,0 +1,14 @@
+Name: Bowei Wang
+UID: 704448696
+
+*** README ***
+
+File description:
+	lab3a.c: this is the source code for the program. The program analyses certain components of an ext2 file system. The implementation uses 6 functions to parse the superblock, group descriptors, bitmap entries, inode table, directory entries and indirect data blocks of a disk image. After parsing each of the components, the program generate 6 csv files,"super.csv", "group.csv", "bitmap.csv", "inode.csv", "directory.csv", and "indirect.csv", containing information of each entry. 
+
+	README: this file contains the description of each file in the tar ball.
+
+	Makefile: this is the makefile used for compiling the program and other tasks. Specifically, it has three targets:
+		default: compiles the source code
+		clean: delete the files created
+		dist: create a tar ball containing all the files mentioned in this README fil.
